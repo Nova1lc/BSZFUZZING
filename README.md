@@ -25,9 +25,96 @@ Se ejecuta directamente en el navegador y proporciona un informe detallado de lo
 | 📄 **Generación de Reportes**   | - Exportación de resultados en formato `.txt`                                                         |
 
 ---
+# ⚙️ Flujo Principal (`startScan()`)
 
-¡NO ME HAGO RESPONSABLE DEL MAL USO QUE LE DEN!
+### 🔄 Etapas del Análisis
 
+1. ✅ Validación de URL de entrada
+2. 🧠 Análisis de headers HTTP
+3. 🔐 Verificación SSL/TLS
+4. 🧪 Prueba de métodos HTTP
+5. 🔎 Fuzzing de rutas
+6. 🚨 Pruebas XSS básicas
+7. 🔍 Detección de tecnologías
+8. 📄 Generación de reporte
+
+---
+
+# 📊 Tabla de Métodos HTTP Verificados
+
+| Método  | Seguro | Descripción                                |
+|---------|--------|--------------------------------------------|
+| OPTIONS | ❌     | Puede exponer información sensible         |
+| TRACE   | ❌     | Puede ser usado para ataques XST           |
+| PUT     | ❌     | Permite modificar recursos                 |
+| DELETE  | ❌     | Permite eliminar recursos                  |
+| PATCH   | ❌     | Permite modificaciones parciales           |
+| GET     | ✅     | Método seguro por defecto                  |
+| POST    | ✅     | Método seguro cuando se usa correctamente |
+
+---
+
+# 🔍 Vulnerabilidades Detectables
+
+### 🔧 Configuraciones Inseguras
+- Headers de seguridad faltantes
+- Cookies sin flags Secure / HttpOnly
+- HSTS no implementado
+
+### 📤 Exposición de Información
+- Archivos sensibles (`.env`, `config.php`)
+- Directorios expuestos (`/admin`, `/backup`)
+- Mensajes de error SQL visibles
+
+### 🚨 Problemas de Seguridad
+- Métodos HTTP inseguros habilitados
+- XSS reflejados básicos
+- HTTPS no implementado
+
+---
+
+# 📋 Ejemplo de Uso
+
+1. Ingresar URL objetivo (ej: `https://ejemplo.com`)
+2. Hacer clic en **"Iniciar escaneo"**
+3. Esperar a que complete el análisis
+4. Revisar resultados en pantalla
+5. (Opcional) Exportar reporte completo
+
+---
+
+# 🚫 Limitaciones
+
+- Solo prueba vulnerabilidades básicas
+- No realiza escaneo autenticado
+- Las pruebas XSS son básicas (no DOM-based)
+- El fuzzing es limitado al lado cliente (sin crawler profundo)
+
+---
+
+# 📌 Recomendaciones de Uso
+
+- ⚠️ Solo para **pruebas autorizadas**
+- ❌ No usar en producción sin permiso
+- 🔍 Complementar con herramientas como: Burp Suite, OWASP ZAP
+- 🧪 Verificar manualmente posibles falsos positivos
+
+---
+
+# 📂 Estructura del Reporte
+
+```text
+[📊 RESUMEN FINAL]
+    URL escaneada: https://ejemplo.com
+    Tecnologías detectadas: WordPress, jQuery
+    Rutas encontradas: 12
+    Problemas de seguridad encontrados: 3
+
+[⚠] VULNERABILIDADES:
+    - Cookie sin flag Secure
+    - HSTS no habilitado
+    - Archivo sensible encontrado: /wp-config.php
+```
 
 # ✨ Autor de Scripts Compartido
 
@@ -75,3 +162,4 @@ Este repositorio reúne lo mejor de nuestras ideas y prácticas de desarrollo.
 
 > Si encuentras útil este proyecto, ⭐ dale una estrella y síguenos en GitHub.
 
+# ¡NO ME HAGO RESPONSABLE DEL MAL USO QUE LE DEN!
