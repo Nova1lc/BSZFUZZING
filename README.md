@@ -166,8 +166,6 @@ Esto permite al usuario obtener una **radiografía técnica del sitio web evalua
       🔗 <a href="https://github.com/Nova1lc">github.com/Nova1lc</a><br>
       💻 Ingeniería inversa y optimización de scripts.<br>
       🌐 Proyectos colaborativos y herramientas privadas
-
-        
       🌐 Redes, pentesting.
     </td>
   </tr>
