@@ -141,9 +141,13 @@ Esto permite al usuario obtener una **radiografía técnica del sitio web evalua
     - HSTS no habilitado
     - Archivo sensible encontrado: /wp-config.php
 ```
+
 # bash :
+
 <img width="955" height="177" alt="image" src="https://github.com/user-attachments/assets/4c2f29bf-132c-4d6e-96c6-613eb5a572d4" />
+
 # Web : 
+
 <img width="515" height="726" alt="image" src="https://github.com/user-attachments/assets/330ee77f-a2f7-428d-a838-cfb00530b6d2" />
 
 `url : https://appbsz.crearforo.net/h167-bsz-fuzzing-web	`
