@@ -8,8 +8,38 @@ Realiza un escaneo de seguridad completo y automatizado a una URL objetivo, real
 
 ## 📌 Descripción General
 
-**BSZ Fuzzing** es una herramienta de escaneo web que permite identificar vulnerabilidades comunes, rutas sensibles y configuraciones inseguras en aplicaciones web.  
-Se ejecuta directamente en el navegador y proporciona un informe detallado de los hallazgos.
+**BSZ Fuzzing** es una herramienta de escaneo web ligera que se ejecuta directamente desde el navegador, sin necesidad de instalación ni dependencias externas.  
+Su objetivo principal es ayudar a detectar de forma rápida y automatizada posibles vulnerabilidades, configuraciones incorrectas y rutas sensibles en una aplicación web.
+
+---
+
+## 🛠️ ¿Para qué sirve?
+
+**BSZ Fuzzing** realiza un análisis de seguridad integral sobre una URL objetivo mediante:
+
+- 🔍 **Reconocimiento de cabeceras HTTP**
+- 🛡️ **Evaluación de configuración SSL/TLS**
+- 🧪 **Pruebas de vulnerabilidades básicas** (XSS, métodos HTTP inseguros, errores SQL)
+- 📂 **Fuzzing de rutas y archivos comunes**
+- 🧠 **Identificación de tecnologías utilizadas**
+
+Esto permite al usuario obtener una **radiografía técnica del sitio web evaluado**, destacando posibles debilidades que deben ser corregidas.
+
+---
+
+## 🧯 ¿Cómo puede ayudarte a detectar y solucionar errores?
+
+**BSZ Fuzzing** no solo detecta problemas, sino que proporciona información útil para su mitigación:
+
+| Tipo de Problema                         | Descripción                                                               | Acción Recomendada                                      |
+|-----------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------|
+| 🔴 Headers de seguridad faltantes       | Cabeceras como `X-Frame-Options`, `Content-Security-Policy` no presentes | Configurar cabeceras en el servidor web                 |
+| 🔴 Cookies sin `Secure` / `HttpOnly`    | Las cookies pueden ser robadas o interceptadas                           | Establecer flags en el backend o en el servidor         |
+| 🔴 SSL sin HSTS o con certificados inseguros | Posible vulnerabilidad a ataques downgrade o MITM                    | Implementar HSTS y revisar configuración HTTPS           |
+| 🟠 Archivos sensibles o rutas expuestas | Acceso a archivos como `.env`, `config.php`, `/admin`                    | Proteger rutas mediante autenticación o eliminación      |
+| 🟠 Métodos HTTP inseguros activados     | Métodos como PUT o DELETE abiertos al público                            | Deshabilitar métodos innecesarios desde el servidor      |
+| ⚠️ Mensajes de error SQL                | Muestra información de base de datos o errores internos                  | Usar manejo de errores genérico y ocultar trazas        |
+| ⚠️ XSS Reflejado                        | Entrada no validada que se refleja en la salida                          | Escapar contenido y validar entradas en frontend/backend |
 
 ---
 
