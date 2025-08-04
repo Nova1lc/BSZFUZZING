@@ -16,13 +16,21 @@ Realiza un escaneo de seguridad completo y automatizado a una URL objetivo, real
 
 Repositorio mantenido conjuntamente por:
 
-## 👤 Nova1lc
-
-[![Nova1lc GitHub](https://github.com/Nova1lc.png)](https://github.com/Nova1lc)
-
-- 🔗 [github.com/Nova1lc](https://github.com/Nova1lc)
-- 💻 Apasionado por la ingeniería inversa y optimización de scripts.
-- 🌐 Proyectos colaborativos y herramientas privadas.
+<table>
+  <tr>
+    <td valign="middle">
+      <a href="https://github.com/Nova1lc">
+        <img src="https://github.com/Nova1lc.png" width="30" height="30" style="border-radius: 50%;">
+      </a>
+    </td>
+    <td>
+      <b>Nova1lc</b><br>
+      🔗 <a href="https://github.com/Nova1lc">github.com/Nova1lc</a><br>
+      💻 Ingeniería inversa y optimización de scripts.<br>
+      🌐 Proyectos colaborativos y herramientas privadas.
+    </td>
+  </tr>
+</table>
 
 ---
 
