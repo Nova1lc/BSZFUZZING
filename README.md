@@ -34,13 +34,21 @@ Repositorio mantenido conjuntamente por:
 
 ---
 
-## 👤 Avastroficial
-
-[![Avastroficial GitHub](https://github.com/Avastroficial.png)](https://github.com/Avastroficial)
-
-- 🔗 [github.com/Avastroficial](https://github.com/Avastroficial)
-- 🧠 Especializado en automatización, web tools y bots.
-- 🚀 Siempre explorando nuevos frameworks.
+<table>
+  <tr>
+    <td valign="middle">
+      <a href="https://github.com/Avastroficial">
+        <img src="https://github.com/Avastroficial.png" width="30" height="30" style="border-radius: 50%;">
+      </a>
+    </td>
+    <td>
+      <b>Avastroficial</b><br>
+      🔗 <a href="https://github.com/Avastroficial">github.com/Avastroficial</a><br>
+      🧠 Automatización, web tools y bots.<br>
+      🚀 Explorando nuevos frameworks.
+    </td>
+  </tr>
+</table>
 
 ---
 
